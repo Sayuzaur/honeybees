@@ -1,0 +1,5 @@
+ tile.@.beehive_oak.name=Wooden Beehive
+tile.@.beenest_oak.name=Wild Beenest in Oak
+tile.@.beenest_birch.name=Wild Beenest in Birch
+
+item.@.honey.name=Honey

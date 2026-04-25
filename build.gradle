@@ -97,6 +97,8 @@ dependencies {
 
     modImplementation ("maven.modrinth:freecam-stationapi:${project.properties["freecam-stapi_version"]}")
 
+    modImplementation("maven.modrinth:farnutil:3.3.2-babric-b1.7.3")
+
     if (project.hasProperty("modmenu_version")) {
         modImplementation("net.danygames2014:modmenu:${project.modmenu_version}") {
             transitive = false

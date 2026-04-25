@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "template",
+  "id": "honeybees",
   "version": "${version}",
 
-  "name": "Template",
+  "name": "Honey Bees",
   "description": "",
   "authors": [
     "Sayuzaur"
@@ -13,12 +13,14 @@
     "sources": ""
   },
 
-  "license": "",
-  "icon": "assets/template/icon.png",
+  "license": "LGPL-3.0-or-later",
+  "icon": "assets/honeybees/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "stationapi:event_bus": [
+      "io.github.sayuzaur.honeybees.events.init.BlockListener",
+      "io.github.sayuzaur.honeybees.events.init.ItemListener"
     ],
     "stationapi:event_bus_client": [
     ],
@@ -26,7 +28,7 @@
     ]
   },
   "mixins": [
-    "template.mixins.json"
+    "honeybees.mixins.json"
   ],
 
   "depends": {
