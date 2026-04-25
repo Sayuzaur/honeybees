@@ -6,10 +6,14 @@
   "name": "Template",
   "description": "",
   "authors": [
-    "DanyGames2014"
+    "Sayuzaur"
   ],
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
 
-  "license": "MIT",
+  "license": "",
   "icon": "assets/template/icon.png",
 
   "environment": "*",
