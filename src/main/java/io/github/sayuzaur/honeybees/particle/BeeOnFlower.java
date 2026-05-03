@@ -11,7 +11,7 @@ import net.minecraft.world.World;
 import org.lwjgl.opengl.GL11;
 
 @Environment(EnvType.CLIENT)
-public class BeeFlyingIn extends Particle implements ParticleDisableQuadDraw {
+public class BeeOnFlower extends Particle implements ParticleDisableQuadDraw {
     public static final int TEXTURE_COUNT = 3;
     public static final String[] TEXTURES = new String[TEXTURE_COUNT];
     static
@@ -22,29 +22,19 @@ public class BeeFlyingIn extends Particle implements ParticleDisableQuadDraw {
 
     protected final int texIndex;
 
-    public BeeFlyingIn(World world, double x, double y, double z, double velocityX, double velocityY, double velocityZ) {
+    public BeeOnFlower(World world, double x, double y, double z, double velocityX, double velocityY, double velocityZ) {
         super(world, x, y, z, velocityX, velocityY, velocityZ);
-        float randX = this.random.nextFloat() + this.random.nextFloat() - 1;
-        float randZ = this.random.nextFloat() + this.random.nextFloat() - 1;
-        this.setPosition(x + 0.5 + (randX * 2),
-                y,
-                z + 0.5 + (randZ * 2));
+        this.setPosition(x + random.nextFloat(),
+                y + 0.4F + (random.nextFloat() * 0.5F),
+                z + random.nextFloat());
         this.scale = (random.nextFloat() * 0.5F);
         this.setBoundingBoxSpacing(0.25F, 0.25F);
-        this.velocityY = (this.random.nextFloat() + this.random.nextFloat() - 1) / 200.0F;
-        this.velocityX = Math.round((this.velocityX * 0.6F) * -10);
-        this.velocityZ = Math.round((this.velocityZ * 0.6F) * -10);
-
-        if (this.velocityX == 0 && this.velocityZ == 0) {
-            this.maxParticleAge = 0;
-        } else {
-            this.velocityX = (this.velocityX / 10.0F + 0.001F) + (randX * -0.065F);
-            this.velocityZ = (this.velocityZ / 10.0F + 0.001F) + (randZ * -0.065F);
-
-            this.maxParticleAge = random.nextInt(10) + 50;
-        }
+        this.velocityY = this.random.nextFloat() / 80.0F + 0.005F;
+        this.velocityX = 0.0F;
+        this.velocityZ = 0.0F;
 
         this.noClip = false;
+        this.maxParticleAge = random.nextInt(40) + 80;
         this.texIndex = random.nextInt(TEXTURE_COUNT);
     }
 
@@ -96,16 +86,14 @@ public class BeeFlyingIn extends Particle implements ParticleDisableQuadDraw {
         if (this.particleAge >= this.maxParticleAge) {
             this.markDead();
         } else {
+            if (random.nextInt(3) == 0) {
+                this.velocityY *= -1;
+            }
+
             this.move(this.velocityX, this.velocityY, this.velocityZ);
 
             if (this.y == this.prevY) {
-                this.velocityY *= -1;
-            }
-            if (this.x == this.prevX) {
-                this.markDead();
-            }
-            if (this.z == this.prevZ) {
-                this.markDead();
+                this.velocityY = this.velocityY + 0.02F;
             }
         }
     }

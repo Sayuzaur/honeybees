@@ -16,9 +16,13 @@ public class ItemListener {
     }
 
     public static Item HONEY;
+    public static Item JAR;
+    public static Item JAR_BEES;
 
     @EventListener
     public static void registerItems(ItemRegistryEvent event){
         HONEY = new TemplateItem(NAMESPACE.id("honey")).setTranslationKey(NAMESPACE.id("honey"));
+        JAR = new TemplateItem(NAMESPACE.id("jar")).setTranslationKey(NAMESPACE.id("jar"));
+        JAR_BEES = new TemplateItem(NAMESPACE.id("jar_bees")).setTranslationKey(NAMESPACE.id("jar_bees")).setMaxCount(1).setCraftingReturnItem(ItemListener.JAR);
     }
 }

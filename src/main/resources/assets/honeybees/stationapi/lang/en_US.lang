@@ -1,5 +1,8 @@
- tile.@.beehive_oak.name=Wooden Beehive
-tile.@.beenest_oak.name=Wild Beenest in Oak
-tile.@.beenest_birch.name=Wild Beenest in Birch
+tile.@.beehive_oak.name=Wooden Beehive
+tile.@.beenest_oak.name=Oak Log Bee Nest
+tile.@.beenest_birch.name=Birch Log Bee Nest
+tile.@.honeycomb.name=Giant Honeycomb
 
 item.@.honey.name=Honey
+item.@.jar.name=Glass Jar
+item.@.jar_bees.name=Jar full of Bees

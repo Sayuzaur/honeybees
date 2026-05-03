@@ -20,11 +20,15 @@
   "entrypoints": {
     "stationapi:event_bus": [
       "io.github.sayuzaur.honeybees.events.init.BlockListener",
-      "io.github.sayuzaur.honeybees.events.init.ItemListener"
+      "io.github.sayuzaur.honeybees.events.init.ItemListener",
+      "io.github.sayuzaur.honeybees.events.init.FeatureListener"
     ],
     "stationapi:event_bus_client": [
     ],
     "stationapi:event_bus_server": [
+    ],
+    "gcapi3": [
+      "io.github.sayuzaur.honeybees.HoneyBees"
     ]
   },
   "mixins": [

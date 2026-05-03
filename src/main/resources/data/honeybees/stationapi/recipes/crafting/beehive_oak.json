@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ppp",
+    "hjh",
+    "ppp"
+  ],
+  "key": {
+    "p": {
+      "tag": "minecraft:planks"
+    },
+    "h": {
+      "item": "honeybees:honey"
+    },
+    "j": {
+      "item": "honeybees:jar_bees"
+    }
+  },
+  "result": {
+    "item": "honeybees:beehive_oak"
+  }
+}
