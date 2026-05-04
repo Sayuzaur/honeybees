@@ -12,7 +12,7 @@ import org.lwjgl.opengl.GL11;
 
 @Environment(EnvType.CLIENT)
 public class BeeOnFlower extends Particle implements ParticleDisableQuadDraw {
-    public static final int TEXTURE_COUNT = 3;
+    public static final int TEXTURE_COUNT = 6;
     public static final String[] TEXTURES = new String[TEXTURE_COUNT];
     static
     {
