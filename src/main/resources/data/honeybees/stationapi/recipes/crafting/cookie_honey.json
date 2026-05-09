@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "whw"
+  ],
+  "key": {
+    "w": {
+      "item": "minecraft:wheat"
+    },
+    "h":{
+      "item": "honeybees:honey"
+    }
+  },
+  "result": {
+    "item": "honeybees:cookie_honey",
+    "count": "8"
+  }
+}
