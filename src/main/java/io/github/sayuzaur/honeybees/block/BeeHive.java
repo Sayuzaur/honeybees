@@ -1,3 +1,19 @@
+/*
+ * Copyright (C) 2026 Sayuzaur
+ *
+ * This file is part of HoneyBees.
+ * HoneyBees is free software: you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as published by the Free Software Foundation,
+ * either version 3 of the License, or (at your option) any later version.
+ *
+ * Foodies is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+ * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License along with HoneyBees.
+ * If not, see <https://www.gnu.org/licenses/>.
+ */
+
 package io.github.sayuzaur.honeybees.block;
 
 import farn.farn_util.api.particle.ParticleAPI;
@@ -152,7 +168,7 @@ public class BeeHive extends TemplateBlock {
                     honey = 0;
 
                     ItemStack stack = new ItemStack(ItemListener.HONEY);
-                    ItemEntity itemEntity = new ItemEntity(world, x + 0.5f, y + 1.5f, z + 0.5f, stack);
+                    ItemEntity itemEntity = new ItemEntity(world, player.x, player.y, player.z, stack);
                     world.spawnEntity(itemEntity);
                     world.playSound(x, y, z, "mob.chickenplop", 0.5F, 0.6F);
 
@@ -180,7 +196,7 @@ public class BeeHive extends TemplateBlock {
                     userHand.count--;
 
                     ItemStack stack = new ItemStack(ItemListener.JAR_BEES);
-                    ItemEntity itemEntity = new ItemEntity(world, x + 0.5f, y + 1.5f, z + 0.5f, stack);
+                    ItemEntity itemEntity = new ItemEntity(world, player.x, player.y, player.z, stack);
                     world.spawnEntity(itemEntity);
                     world.playSound(x, y, z, "mob.chickenplop", 0.5F, 1.6F);
 

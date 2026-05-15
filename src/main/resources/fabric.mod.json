@@ -3,14 +3,14 @@
   "id": "honeybees",
   "version": "${version}",
 
-  "name": "Honey Bees",
-  "description": "",
+  "name": "HoneyBees",
+  "description": "Adds real-size bees, beehives, honey glazed food, honey sweets and honeycomb blocks. It's a standalone version of Foodies 1.1 update features.",
   "authors": [
     "Sayuzaur"
   ],
   "contact": {
     "homepage": "",
-    "sources": ""
+    "sources": "https://github.com/Sayuzaur/honeybees"
   },
 
   "license": "LGPL-3.0-or-later",
@@ -26,6 +26,9 @@
     "stationapi:event_bus_client": [
     ],
     "stationapi:event_bus_server": [
+    ],
+    "bhcreative:event_bus": [
+      "io.github.sayuzaur.honeybees.events.init.CreativeListener"
     ],
     "gcapi3": [
       "io.github.sayuzaur.honeybees.HoneyBees"

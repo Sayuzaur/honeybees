@@ -7,5 +7,9 @@ item.@.honey.name=Honey
 item.@.jar.name=Glass Jar
 item.@.jar_bees.name=Jar full of Bees
 item.@.pork_glazed.name=Honey Glazed Porkchop
+item.@.cod_glazed.name=Honey Glazed Fish
 item.@.apple_glazed.name=Honeyed Apple
 item.@.cookie_honey.name=Honey Cookie
+item.@.candy_honey.name=Honey Candy
+
+tab.@.honeybees_creative_tab.name=Honey Bees
