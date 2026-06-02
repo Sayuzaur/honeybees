@@ -99,8 +99,6 @@ dependencies {
 
     modImplementation("maven.modrinth:farnutil:3.3.2-babric-b1.7.3")
 
-    modImplementation("maven.modrinth:keyf3:1.0.2")
-
     if (project.hasProperty("modmenu_version")) {
         modImplementation("net.danygames2014:modmenu:${project.modmenu_version}") {
             transitive = false

@@ -44,13 +44,13 @@ public class ItemListener {
 
     @EventListener
     public static void registerItems(ItemRegistryEvent event){
-        JAR = new TemplateItem(NAMESPACE.id("jar")).setTranslationKey(NAMESPACE.id("jar"));
-        JAR_BEES = new TemplateItem(NAMESPACE.id("jar_bees")).setTranslationKey(NAMESPACE.id("jar_bees")).setMaxCount(1).setCraftingReturnItem(ItemListener.JAR);
-        HONEY = new TemplateItem(NAMESPACE.id("honey")).setTranslationKey(NAMESPACE.id("honey"));
-        PORK_GLAZED = new TemplateFoodItem(NAMESPACE.id("pork_glazed"), 9, true).setTranslationKey(NAMESPACE.id("pork_glazed"));
-        COD_GLAZED = new TemplateFoodItem(NAMESPACE.id("cod_glazed"), 6, true).setTranslationKey(NAMESPACE.id("cod_glazed"));
-        APPLE_GLAZED = new TemplateFoodItem(NAMESPACE.id("apple_glazed"), 5, false).setTranslationKey(NAMESPACE.id("apple_glazed"));
-        COOKIE_HONEY = new TemplateStackableFoodItem(NAMESPACE.id("cookie_honey"), 1, false, 8).setTranslationKey(NAMESPACE.id("cookie_honey"));
-        CANDY_HONEY = new TemplateStackableFoodItem(NAMESPACE.id("candy_honey"), 1, false, 8).setTranslationKey(NAMESPACE.id("candy_honey"));
+        JAR = new TemplateItem(NAMESPACE.id("jar"));
+        JAR_BEES = new TemplateItem(NAMESPACE.id("jar_bees")).setMaxCount(1).setCraftingReturnItem(ItemListener.JAR);
+        HONEY = new TemplateItem(NAMESPACE.id("honey"));
+        PORK_GLAZED = new TemplateFoodItem(NAMESPACE.id("pork_glazed"), 9, true);
+        COD_GLAZED = new TemplateFoodItem(NAMESPACE.id("cod_glazed"), 6, true);
+        APPLE_GLAZED = new TemplateFoodItem(NAMESPACE.id("apple_glazed"), 5, false);
+        COOKIE_HONEY = new TemplateStackableFoodItem(NAMESPACE.id("cookie_honey"), 1, false, 8);
+        CANDY_HONEY = new TemplateStackableFoodItem(NAMESPACE.id("candy_honey"), 1, false, 8);
     }
 }

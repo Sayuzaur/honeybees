@@ -40,9 +40,9 @@ public class BlockListener {
 
     @EventListener
     private static void registerBlocks(BlockRegistryEvent event){
-        BEEHIVE_OAK = new BeeHive(NAMESPACE.id("beehive_oak")).setTranslationKey(NAMESPACE.id("beehive_oak"));
-        BEENEST_OAK = new BeeHive(NAMESPACE.id("beenest_oak")).setTranslationKey(NAMESPACE.id("beenest_oak"));
-        BEENEST_BIRCH = new BeeHive(NAMESPACE.id("beenest_birch")).setTranslationKey(NAMESPACE.id("beenest_birch"));
-        HONEYCOMB = new TemplateBlock(NAMESPACE.id("honeycomb"), Material.SOIL).setHardness(0.6F).setTranslationKey(NAMESPACE.id("honeycomb"));
+        BEEHIVE_OAK = new BeeHive(NAMESPACE.id("beehive_oak"));
+        BEENEST_OAK = new BeeHive(NAMESPACE.id("beenest_oak"));
+        BEENEST_BIRCH = new BeeHive(NAMESPACE.id("beenest_birch"));
+        HONEYCOMB = new TemplateBlock(NAMESPACE.id("honeycomb"), Material.SOIL).setHardness(0.6F);
     }
 }
